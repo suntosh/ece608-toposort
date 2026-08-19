@@ -11,6 +11,7 @@ algorithm** and **DFS reverse postorder** -  with cycle detection that tells you
 </p>
 
 Written for ECE 608 (Computational Models and Methods, Purdue).
+
 [![CI](https://github.com/suntosh/ece608-toposort/actions/workflows/ci.yml/badge.svg)](https://github.com/suntosh/ece608-toposort/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.9%20|%203.10%20|%203.11%20|%203.12%20|%203.13-blue?logo=python&logoColor=white)](https://www.python.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
