@@ -12,6 +12,13 @@ algorithm** and **DFS reverse postorder** -  with cycle detection that tells you
 
 Written for ECE 608 (Computational Models and Methods, Purdue).
 
+[![CI](https://github.com/suntosh/ece608-toposort/actions/workflows/ci.yml/badge.svg)](https://github.com/suntosh/ece608-toposort/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.9%20|%203.10%20|%203.11%20|%203.12%20|%203.13-blue?logo=python&logoColor=white)](https://www.python.org)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen)](pyproject.toml)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Tests](https://img.shields.io/badge/tests-112%20passing-brightgreen)](tests)
+
 **No runtime dependencies.** The graph container is part of the package, in
 about 170 lines. That is a deliberate choice for a teaching implementation: the
 point is to show the algorithms, and a dependency on `networkx` would mean the
