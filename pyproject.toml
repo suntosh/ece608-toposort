@@ -1,0 +1,68 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ece608-toposort"
+description = "Topological sorting of directed graphs: Kahn's algorithm and DFS, with no runtime dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = [
+  "topological sort", "graphs", "DAG", "directed acyclic graph",
+  "depth first search", "breadth first search", "Kahn's algorithm",
+  "algorithms", "cycle detection",
+]
+authors = [{ name = "Santosh Ahuja", email = "ahuja28@purdue.edu" }]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "Typing :: Typed",
+]
+dependencies = []          # intentionally none — see README
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov>=4", "ruff>=0.4", "mypy>=1.8"]
+
+[project.urls]
+Source = "https://github.com/suntosh/ece608-toposort"
+Issues = "https://github.com/suntosh/ece608-toposort/issues"
+
+[tool.hatch.version]
+path = "src/ece608/toposort/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ece608"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+
+[tool.coverage.run]
+branch = true
+source = ["src/ece608/toposort"]
+omit = ["src/ece608/toposort/__about__.py"]
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+files = ["src"]
