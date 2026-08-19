@@ -4,6 +4,12 @@ Topological ordering of directed graphs by two independent routes — **Kahn's
 algorithm** and **DFS reverse postorder** — with cycle detection that tells you
 *which* nodes cycle, not merely that one exists.
 
+<p align="center">
+  <img src="assets/toposort.png"
+       alt="Topological Sort DAG Example"
+       width="70%">
+</p>
+
 Written for ECE 608 (Computational Models and Methods, Purdue).
 
 **No runtime dependencies.** The graph container is part of the package, in
