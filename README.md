@@ -5,7 +5,7 @@ algorithm** and **DFS reverse postorder** — with cycle detection that tells yo
 *which* nodes cycle, not merely that one exists.
 
 <p align="center">
-  <img src="assets/toposort.png"
+  <img src="assets/ece608-toposort.png"
        alt="Topological Sort DAG Example"
        width="70%">
 </p>
